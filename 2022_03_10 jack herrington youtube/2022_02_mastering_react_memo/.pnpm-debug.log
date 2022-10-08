@@ -1,0 +1,14 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 error pnpm": {
+    "code": "ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND",
+    "err": {
+      "name": "pnpm",
+      "message": "No package.json (or package.yaml, or package.json5) was found in \"/Users/mark/Documents/git_stuff/markdesign/playground/2022_03_10 jack herrington youtube/2022_02_mastering_react_memo\".",
+      "code": "ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND",
+      "stack": "pnpm: No package.json (or package.yaml, or package.json5) was found in \"/Users/mark/Documents/git_stuff/markdesign/playground/2022_03_10 jack herrington youtube/2022_02_mastering_react_memo\".\n    at readProjectManifest (/Users/mark/.nvm/versions/node/v14.19.0/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.3/node_modules/pnpm/dist/pnpm.cjs:19818:13)\n    at async Object.readProjectManifestOnly (/Users/mark/.nvm/versions/node/v14.19.0/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.3/node_modules/pnpm/dist/pnpm.cjs:19822:28)\n    at async readProjectManifestOnly (/Users/mark/.nvm/versions/node/v14.19.0/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.3/node_modules/pnpm/dist/pnpm.cjs:43721:24)\n    at async Object.handler (/Users/mark/.nvm/versions/node/v14.19.0/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.3/node_modules/pnpm/dist/pnpm.cjs:177918:24)\n    at async /Users/mark/.nvm/versions/node/v14.19.0/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.3/node_modules/pnpm/dist/pnpm.cjs:182194:21\n    at async run (/Users/mark/.nvm/versions/node/v14.19.0/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.3/node_modules/pnpm/dist/pnpm.cjs:182168:34)\n    at async runPnpm (/Users/mark/.nvm/versions/node/v14.19.0/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.3/node_modules/pnpm/dist/pnpm.cjs:182387:5)\n    at async /Users/mark/.nvm/versions/node/v14.19.0/pnpm-global/5/node_modules/.pnpm/pnpm@6.32.3/node_modules/pnpm/dist/pnpm.cjs:182379:7"
+    }
+  }
+}

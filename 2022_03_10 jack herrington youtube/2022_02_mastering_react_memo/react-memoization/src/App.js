@@ -15,10 +15,10 @@ function App() {
       {/* <Example2 /> */}
 
       {/* Example of object, useing useMemo */}
-      {/* <Example3 /> */}
+      <Example3 />
 
       {/* Example of function, using useCallBack */}
-      <Example4 />
+      {/* <Example4 /> */}
     </div>
   );
 }

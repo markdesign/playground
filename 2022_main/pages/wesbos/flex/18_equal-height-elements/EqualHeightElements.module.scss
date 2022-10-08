@@ -1,0 +1,43 @@
+.content {
+    font-family: sans-serif;
+    margin: 0;
+    background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+
+    a {
+        color: white;
+    }
+
+    .item.large {
+        border: 2px dashed red;
+        font-size: 40px;
+    }
+
+    .item.small {
+        border: 2px dashed blue;
+        font-size: 20px;
+    }
+
+    .item {
+        background: rgba(255, 255, 255, 0.2);
+        margin: 10px;
+        padding: 20px;
+        font-size: 30px;
+    }
+
+    /* Flexbox Starts Here: */
+    .elements {
+        display: flex;
+        flex-wrap: wrap;
+
+        // justify-content: space-between;
+        // justify-content: space-around;
+        justify-content: center;
+    }
+
+    .item {
+        // - 20 px which is the margin 10px from above
+        // flex: 1 1 calc(33.33% - 20px);
+        
+        flex: 0 1 calc(33.33% - 20px);
+    }
+}

@@ -6,34 +6,40 @@ import "./App.css";
  so if you pass in a complex object, it will re-render.
 */
 
-function Swatch({ params }) {
-  console.log(`Swatch  rendered ${params.colors}`);
-  return <div style={{ margin: 2, width: 75, height: 75, backgroundColor: params.colors }}></div>;
+function Swatch(props) {
+  console.log('[Example3.js 10] props : ', props);
+    const { colors } = props;
+    console.log(`Swatch  rendered ${colors}`);
+    return <div style={{ margin: 2, width: 75, height: 75, backgroundColor: colors }}></div>;
 }
 
 const MemoedSwatch = memo(Swatch);
 
 function Example3() {
-  const [appRenderIndex, setAppRenderIndex] = useState(0);
-  const [colors, setColors] = useState("red");
+    const [appRenderIndex, setAppRenderIndex] = useState(0);
+    const [colors, setColors] = useState("red");
 
-  // useMemo is a hook that returns a memoized value.
-  // only changes if colors changes.
-  const params = useMemo(() => ({ colors }), [colors]);
+    // useMemo is a hook that returns a memoized value.
+    // only changes if colors changes.
+    const params = useMemo(() => {
+        return {
+            colors: colors,
+        };
+    }, [colors]);
 
-  return (
-    <div className="App">
-      <div>
-        <button onClick={() => setAppRenderIndex(appRenderIndex + 1)}>Re-render app</button>
-      </div>
-      <div>
-        <button onClick={() => setColors(colors === "red" ? "blue" : "red")}>Change color</button>
-      </div>
-      <div>
-        <MemoedSwatch params={params} />
-      </div>
-    </div>
-  );
+    return (
+        <div className="App">
+            <div>
+                <button onClick={() => setAppRenderIndex(appRenderIndex + 1)}>Re-render app</button>
+            </div>
+            <div>
+                <button onClick={() => setColors(colors === "red" ? "blue" : "red")}>Change color</button>
+            </div>
+            <div>
+                <MemoedSwatch {...params} />
+            </div>
+        </div>
+    );
 }
 
 export default Example3;

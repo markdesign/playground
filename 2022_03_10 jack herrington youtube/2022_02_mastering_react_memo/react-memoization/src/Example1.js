@@ -6,6 +6,7 @@ function Swatch({ color }) {
   return <div style={{ margin: 2, width: 75, height: 75, backgroundColor: color }}></div>;
 }
 
+// This will always re-render only if color changes. without memo, it will always render
 const MemoedSwatch = memo(Swatch);
 
 function Example1() {
@@ -23,8 +24,9 @@ function Example1() {
         <button onClick={() => setColors(colors === "red" ? "blue" : "red")}>Change color</button>
       </div>
       <div>
+        <MemoedSwatch color={'RED'} />
         <MemoedSwatch color={colors} />
-        <MemoedSwatch color={colors === "red" ? "blue" : "red"} />
+        {/* <MemoedSwatch color={colors === "red" ? "blue" : "red"} /> */}
       </div>
     </div>
   );

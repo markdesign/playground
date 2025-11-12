@@ -1,0 +1,33 @@
+<!-- https://cloudfour.com/thinks/a-bashful-button-worth-8-million/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+  <link href="./reset.css" rel="stylesheet" type="text/css">
+  <style>
+    main {
+      border: 10px dashed red;
+      background-color: grey;
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 50);
+    }
+  </style>
+</head>
+<body>
+  <main>
+      <h1>Main Content</h1>
+  </main>
+  <script>
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    console.log('vh:', vh)
+
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  </script>
+</body>
+</html>

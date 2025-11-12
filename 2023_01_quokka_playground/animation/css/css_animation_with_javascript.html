@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .square {
+        display: inline-block;
+        width: 75px;
+        height: 75px;
+        background: #950000;
+      }
+
+      .supports-hidden {
+        transition: opacity 0.5s;
+      }
+
+      .hidden {
+        opacity: 0;
+      }
+
+      .circle {
+        display: inline-block;
+        width: 75px;
+        height: 75px;
+        background: #009578;
+        border-radius: 50%;
+      }
+
+      .pulse {
+        animation: pulse 0.5s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.5;
+          transform: scale(0.75);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="square supports-hidden"></div>
+    <button type="button" class="btn-hide-square">Hide Square</button>
+
+    <br />
+
+    <div class="circle supports-hidden"></div>
+    <button type="button" class="btn-pulse-circle">Pulse Circle</button>
+
+    <script>
+      const square = document.querySelector(".square");
+      const circle = document.querySelector(".circle");
+      const btnHideSquare = document.querySelector(".btn-hide-square");
+      const btnPulseCircle = document.querySelector(".btn-pulse-circle");
+
+      btnHideSquare.addEventListener("click", () => {
+        // square.classList.add("hidden");
+        square.classList.toggle("hidden");
+      });
+
+      btnPulseCircle.addEventListener("click", () => {
+        circle.classList.toggle("pulse");
+      });
+    </script>
+  </body>
+</html>
